@@ -14,6 +14,7 @@ URL:		http://search.cpan.org/dist/%{module}/
 Requires:	perl
 BuildRequires:	perl-devel
 BuildRequires:  perl-DateTime
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:	noarch
 
 %description
