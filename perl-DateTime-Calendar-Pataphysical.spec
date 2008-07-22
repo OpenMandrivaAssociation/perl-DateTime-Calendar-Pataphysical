@@ -1,7 +1,7 @@
 %define module	DateTime-Calendar-Pataphysical
 %define name	perl-%{module}
 %define version	0.04
-%define release	%mkrel 3
+%define release	%mkrel 5
 
 Summary:	Dates in the pataphysical calendar
 Name:		%{name}
