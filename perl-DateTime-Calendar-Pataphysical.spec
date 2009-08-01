@@ -1,21 +1,19 @@
-%define module	DateTime-Calendar-Pataphysical
-%define name	perl-%{module}
-%define version	0.04
-%define release	%mkrel 5
+%define upstream_name	 DateTime-Calendar-Pataphysical
+%define upstream_version 0.04
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Dates in the pataphysical calendar
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source0:	%{module}-%{version}.tar.bz2
-URL:		http://search.cpan.org/dist/%{module}/
-Requires:	perl
-BuildRequires:	perl-devel
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:  perl-DateTime
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 DateTime::Calendar::Pataphysical is the implementation of the pataphysical
@@ -24,7 +22,7 @@ regularity makes this a convenient alternative for the irregular Gregorian
 calendar.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -44,4 +42,3 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %{perl_vendorlib}/DateTime/Calendar/*
 %{_mandir}/man3/*
-
