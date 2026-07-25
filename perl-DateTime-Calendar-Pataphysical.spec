@@ -1,15 +1,15 @@
 %define upstream_name	 DateTime-Calendar-Pataphysical
-%define upstream_version 0.04
+%define upstream_version 0.07
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Dates in the pataphysical calendar
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}/
-Source0:	%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://github.com/book/DateTime-Calendar-Pataphysical
+Source0:	https://cpan.metacpan.org/authors/id/B/BO/BOOK/DateTime-Calendar-Pataphysical-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
