@@ -1,15 +1,13 @@
 %define upstream_name	 DateTime-Calendar-Pataphysical
-%define upstream_version 0.07
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.07
+Release:	2
 
 Summary:	Dates in the pataphysical calendar
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/book/DateTime-Calendar-Pataphysical
-Source0:	https://cpan.metacpan.org/authors/id/B/BO/BOOK/DateTime-Calendar-Pataphysical-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/B/BO/BOOK/DateTime-Calendar-Pataphysical-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -23,7 +21,7 @@ regularity makes this a convenient alternative for the irregular Gregorian
 calendar.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -47,9 +45,7 @@ make test
 
 * Sat Aug 01 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 0.40.0-1mdv2011.0
 + Revision: 406974
-- rebuild using %%perl_convert_version
-
-* Wed Jul 23 2008 Thierry Vignaud <tv@mandriva.org> 0.04-5mdv2009.0
+- rebuild using %0.07 Wed Jul 23 2008 Thierry Vignaud <tv@mandriva.org> 0.04-5mdv2009.0
 + Revision: 241200
 - rebuild
 - kill re-definition of %%buildroot on Pixel's request
